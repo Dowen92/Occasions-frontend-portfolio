@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a custom occasion page to make this an occasion to remember." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
+
+    <link defer rel="stylesheet" type="text/css" href="Styles/Birthday.css" />
+    <link defer rel="stylesheet" type="text/css" href="Styles/Christmas.css" />
+    <link defer rel="stylesheet" type="text/css" href="Styles/Confetti.css" />
+    <link defer rel="stylesheet" type="text/css" href="Styles/Hearts.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" type="text/css" href="Styles/Site.css">
+    <link rel="stylesheet" type="text/css" href="Styles/spectrum.css">
+    <link defer rel="stylesheet" type="text/css" href="Styles/fontselect-alternate.css" />
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
+
+    <script defer type="text/javascript" src="js/Create.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src='js/spectrum.js'></script>
+    <script defer type="text/javascript" src="js/jquery.fontselect.js"></script>
+    <script defer type="text/javascript" src="js/UploadPreview.js"></script>
+
+    <title>My Occasion</title>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:rgba(255, 255, 255, 0.51) !important;">
+        <a href="index.html" class="navbar-brand" style="z-index:10;">
+            <img src="images/Logo/Logo_0.png" width="150" alt="My Occasion logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navStyle" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="create.html" class="nav-item nav-link active">Create</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div id="discountBanner">
+        <h6 style="padding:10px; text-align:center; margin:0px;">GET <strong>15%</strong> OFF BY USING CODE <strong>OCCASION21</strong> AT CHECKOUT</h6>
+    </div>
+
+    <h1 class="display-4" style="text-align:center; padding:10px; margin-top:25px;">Let's create your page </h1>
+    <div id="bm" style="margin: auto; max-width:300px;"></div>
+        
+    <br />
+
+    <div>
+        <div style="position:relative; width:100%; top:41px;">
+            <div id="bm4" style="margin: auto; width:50px;"></div>
+        </div>
+        <hr style="width:90%" />
+    </div>
+
+    <h3 class="instructions_header" style="margin-top:100px;">Choose your layout</h3>
+    <p style="text-align:center">Preview and pick a layout for your occasion</p>
+    
+    <input type="checkbox" id="preview-check" name="preview" value="true" style="display:none;" />
+    <div class="form-row" style="display:none; justify-content:center;">
+        <select id="layoutSelection" class="form-control" name="templateSelected">
+            <option>Layout 1</option>
+            <option>Layout 2</option>
+            <option>Layout 3</option>
+        </select>
+    </div>
+
+    <div style="display:flex; justify-content:space-evenly; flex-wrap:wrap; margin-top:50px; ">
+        <div class="col" style="min-width:200px; display:flex; flex-direction:column; max-width:300px; max-height:300px; margin-bottom:75px;">
+            <div class="img-hover-zoom" id="example1">
+                <div class="anim" id="bm1" style="width:50%; height:auto; position:absolute; top:15%; z-index:2; left:25%;"></div>
+                <img id="layoutSelection0" class="selected" style="width:100%; height:auto !important;" src="images/Examples/Layout1.JPG" alt="Layout image 1" />
+
+            </div>
+            <div>
+                <a href="html/examples/layout1.html" target="_blank" class="href-button btn btn-outline-success" style="width:100%; margin-top:10px;">Preview</a>            
+                <button type="button" class="btn btn-outline-success" onclick="playAnimSelection(0, true)" style="width:100%; margin-top:10px;">Select</button>
+            </div>
+        </div>
+        <div class="col" style="min-width:200px; display:flex; flex-direction:column; max-width:300px; max-height:300px; margin-bottom:75px;">
+            <div class="img-hover-zoom" id="example2">
+                <div class="anim" id="bm2" style="width:50%; height:auto; position:absolute; top:15%; z-index:2; left:25%;"></div>
+                <img id="layoutSelection1" class="not-selected" style="width:100%; height:auto !important;" src="images/Examples/Layout2.JPG" alt="Layout image 2" />
+
+            </div>
+
+            <div>
+                <a href="html/examples/layout2.html" target="_blank" class="href-button btn btn-outline-success" style="width:100%; margin-top:10px;">Preview</a>            
+                <button type="button" class="btn btn-outline-success" onclick="playAnimSelection(1, true)" style="width:100%; margin-top:10px;">Select</button>
+            </div>
+        </div>
+        <div class="col" style="min-width:200px; display:flex; flex-direction:column; max-width:300px; max-height:300px; margin-bottom:75px;">
+            <div class="img-hover-zoom" id="example3">
+                <div class="anim" id="bm3" style="width:50%; height:auto; position:absolute; top:15%; z-index:2; left:25%;"></div>
+                <img id="layoutSelection2" class="not-selected" style="width:100%; height:auto !important;" src="images/Examples/Layout3.JPG" alt="Layout image 3" />
+            </div>
+
+            <div>
+                <a href="html/examples/layout3.html" target="_blank" class="href-button btn btn-outline-success" style="width:100%; margin-top:10px;">Preview</a>            
+                <button type="button" class="btn btn-outline-success" onclick="playAnimSelection(2, true)" style="width:100%; margin-top:10px;">Select</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <div style="position:relative; width:100%; top:41px;">
+            <div id="bm5" style="margin: auto; width:50px;"></div>
+        </div>
+        <hr />
+    </div>
+
+    <h3 class="instructions_header" style="margin-top:100px;">Add your content</h3>
+    <p style="text-align:center; padding-left:10px; padding-right:10px;">Add the names and your custom message</p>
+
+    <div style="display:flex; justify-content:space-evenly; flex-wrap:wrap; margin-top:50px; ">
+        <div class="col" style="min-width:200px; display:flex; flex-direction:column; max-height:300px; margin-bottom:75px;">
+            <div  class="form-row" style="justify-content: center;">
+                <div  id="createInputBox" class="form-group col-md-6">
+                    <label for="sendersName">Senders name</label>
+                    <input type="text" maxlength="30" class="form-control" name="sendersName" id="sendersName" placeholder="Name..." oninput="sendersNameCount()">
+                    <p id="sendersCount" class="wordCount">0/30</p>
+                </div>
+            </div>
+
+            <div class="form-row" style="justify-content: center;">
+                <div id="createInputBox" class="form-group col-md-6">
+                    <label for="recieversName">Recepients name</label>
+                    <input type="text" maxlength="30" class="form-control" name="recieversName" id="recieversName" placeholder="Name..." oninput="recieversNameCount()">
+                    <p id="recieversCount" class="wordCount">0/30</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="min-width:200px; display:flex; flex-direction:column; max-height:300px; margin-bottom:75px;">
+            <div class="form-row" style="justify-content: center; height:100%">
+                <div id="createInputBox" class="form-group col-md-6">
+                    <label for="message">Message</label>
+                    <textarea style="height:70%" type="text" maxlength="150" class="form-control" name="message" id="message" oninput="messageCount()"></textarea>
+                    <p id="messageCount" class="wordCount">0/150</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <div style="position:relative; width:100%; top:41px;">
+            <div id="bm6" style="margin: auto; width:50px;"></div>
+        </div>
+        <hr/>
+    </div>
+
+    <h3 class="instructions_header" style="margin-top:100px;">Customize your page</h3>
+    <p style="text-align:center; padding-left:10px; padding-right:10px;">Customize the font and the background</p>
+
+    <div class="row" style="margin-top:50px; margin:0px;">
+
+        <div class="col-md-6">
+
+            <div class="form-row" style="justify-content:center;">
+                <div class="form-group">
+                    <label style="padding-right:5px;" for="backgroundColor">Background Color:       </label>
+                    <input id="backgroundColor" type='text' name="backgroundColor" class='background' value='white' />
+                </div>
+            </div>
+
+
+            <div class="form-row" style="justify-content:center;">
+                <div class="form-group">
+                    <label style="padding-right:5px;" for="textColor">Text Color: </label>
+                    <input id="textColor" type='text' name="textColor" class='text' value='black' />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-row" style="display:flex; justify-content:center;">
+                <div class="form-group" style="display:flex; align-content:center; justify-content:center;">
+                    <label for="font" style="padding-right:10px; padding-top:5px;">Font:</label>
+                    <input id="font" name="font" type="text" />
+                </div>
+            </div>
+
+            <div class="form-row" style="display:flex; justify-content:center;">
+                <div class="form-group" style="display:flex; align-content:center; justify-content:center;">
+                    <div class="slidecontainer">
+                        <label for="font_size" style="padding-right:10px; padding-top:5px;">Font size:</label>
+                        <input name="font_size" type="range" min="12" max="100" value="20" class="slider" id="myRange">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row" style="justify-content:center; margin:0px;">
+        <div class="form-row col-md-6" style="justify-content: center;">
+
+            <div id="createInputBox" class="form-group col-md-6">
+                <label style="text-align:center; width:100%;" for="occasion">Background particles:</label>
+                <select class="form-control" id="occasion" name="occasion" onchange="loadParticles()">
+                    <option>None</option>
+                    <option>Balloons</option>
+                    <option>Confetti</option>
+                    <option>Hearts</option>
+                    <option>Snow</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="justify-content: center; padding-top: 15px; margin:0px;">
+
+        <div class="preview" id="preview" style="display:flex; justify-content:center;">
+            <div style="width:100%; height:100%; min-height:186px; display:flex; justify-content:center; position:relative;">
+                <div class="particles-preview" id="particles-preview">
+
+                </div>
+                <div style="position:relative;">
+                    <p id="preview-reciever" style="text-align:center;">Recirever</p>
+                    <p id="preview-message" style="text-align:center;">Message</p>
+                    <p id="preview-sender" style="text-align:center;">Sender</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <p style=" margin-bottom:75px; color:orangered; font-size:15px; text-align:center; padding-top:15px;" id="contrast_warning"></p>
+
+
+    <div>
+        <div style="position:relative; width:100%; top:41px;">
+            <div id="bm7" style="margin: auto; width:50px;"></div>
+        </div>
+        <hr />
+    </div>
+
+    <h3 class="instructions_header" style="margin-top:100px;">Upload your images</h3>
+    <p style="text-align:center; padding-left:10px; padding-right:10px;">Upload up to 5 images to be shown on your occasion page</p>
+
+    <div class="grid-x grid-padding-x" style="margin-bottom:75px; display:flex; justify-content:center;">
+        <div class="small-10 small-offset-1 medium-8 medium-offset-2 cell">
+            <p style="text-align:center; margin-bottom: 15px;">
+                <label for="upload_imgs" class="btn btn-outline-success">Select Images</label>
+                <input class="show-for-sr" type="file" accept=".jpeg, .jpg, .png" id="upload_imgs" name="upload_imgs" multiple />
+            <p style="text-align:center;">
+                <label for="clear_imgs" class="btn btn-outline-danger">Clear Images</label>
+                <input class="show-for-sr" type="button" id="clear_imgs" name="clear_imgs" onclick="ClearImages()" />
+            <p style="text-align:center; font-size:12px; color:#525252;">.jpg .jpeg .png (10MB)</p>
+            <div class="quote-imgs-thumbs" style="text-align:center; min-height:190px;" id="img_preview" aria-live="polite">
+                <p style="font-weight:bold;" id="preview-title">0/5 Images Selected</p>
+                <div id="img-thumbs" style="display:flex; justify-content:center; flex-wrap:wrap;">
+
+                    <div id="bm8" style="margin: 5px; width:150px;  border-style:dashed; border-color:#a2a2a2"></div>
+                    <div id="bm9" style="margin: 5px; width:150px;  border-style:dashed; border-color:#a2a2a2"></div>
+                    <div id="bm10" style="margin: 5px; width:150px; border-style:dashed; border-color:#a2a2a2"></div>
+                    <div id="bm11" style="margin: 5px; width:150px; border-style:dashed; border-color:#a2a2a2"></div>
+                    <div id="bm12" style="margin: 5px; width:150px; border-style:dashed; border-color:#a2a2a2"></div>
+
+                </div>
+            </div>
+            <p id="imgError" style="text-align:center;font-size: 13px;color: red;margin-bottom: 0px;"></p>
+        </div>
+    </div>
+
+    <div>
+        <div style="position:relative; width:100%; top:41px;">
+            <div id="bm13" style="margin: auto; width:50px;"></div>
+        </div>
+        <hr style="width:90%" />
+    </div>
+
+    <h3 class="instructions_header" style="margin-top:100px;">Confirm your choices</h3>
+    <p style="text-align:center; padding-left:10px; padding-right:10px;">Preview your custom page or proceed to checkout</p>
+
+    <div class="row" style="justify-content:center; margin:0px;">
+        <div id="bm14" style="margin: 5px; width:25%;"></div>
+    </div>
+
+    <div class="row rowTwoButtons">
+        <button disabled class="btn btn-outline-success">Preview</button>
+        <button disabled class="create-clear-btn btn btn-outline-success">Confirm</button>
+    </div>
+
+    <div id="footer" style="padding-top:25px; background-color:#efefef">
+        <div class="row footera" style="margin:0px; justify-content:center">
+            <a href="contact.html">Contact Us</a>
+            <p style="color:#c1c1c1;">|</p>
+            <a href="https://www.mind.org.uk/" target="_blank"><p>Mind</p></a>
+            <p style="color:#c1c1c1;">|</p>
+            <a href="attributions.html">Attributions</a>
+        </div>
+    
+        <div class="footer" style="z-index:10;">
+            <p style="font-size:13px !important;">&copy; 2021 - My Ocassion</p>
+        </div>
+    </div>
+
+    <script>
+        var scriptLoaded;
+        var currentParticles = "";
+        function loadParticles() {
+            var particles = document.getElementById("particles-preview");
+            particles.innerHTML = "";
+            if (scriptLoaded) {
+                document.head.removeChild(scriptLoaded);
+                scriptLoaded = null;
+            }
+            var particlesName = document.getElementById("occasion").value;
+
+            if (particlesName == "None" || particlesName == currentParticles) {
+                currentParticles = "";
+                return;
+            }
+
+            var hasJs = false;
+            switch (particlesName) {
+                case "Balloons":
+                    hasJs = true;
+                    currentParticles = "Balloons";
+                    particlesName = "birthday";
+                    break;
+                case "Snow":
+                    hasJs = true;
+                    currentParticles = "Christmas";
+                    particlesName = "christmas";
+                    break;
+                case "Confetti":
+                    hasJs = true;
+                    currentParticles = "Confetti";
+                    particlesName = "confetti";
+                    break;
+                case "Hearts":
+                    hasJs = true;
+                    currentParticles = "Hearts";
+                    particlesName = "Hearts";
+                    break;
+            }
+
+            $("#particles-preview").load('html/' + currentParticles+ 'Particles.html');
+ 
+            scriptLoaded = document.createElement("script");
+
+            scriptLoaded.src = 'js/particles/' + particlesName + '.js';
+            document.head.appendChild(scriptLoaded);
+
+        }
+
+        function updateEndParticlesPosition() {
+            updateSetEndY();
+        }
+
+        function updateSetEndY() {
+            return;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿.show-fade {
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+}
+
+.hide-fade {
+    animation-name: fade-out;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    -webkit-animation-name: fade-out;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

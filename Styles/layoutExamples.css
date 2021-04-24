@@ -1,0 +1,27 @@
+body {
+    background: beige;
+    height: 100vh;
+}
+
+h1, h2, h3, p{
+    font-family: 'Dancing Script', cursive;
+}
+
+a {
+    color: black !important;
+    background-color: beige !important;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    color: beige !important;
+    background-color:black !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li a.active{
+    color: beige !important;
+    background-color: black !important;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a custom occasion page to make this an occasion to remember." />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
+
+    <!-- async CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <script defer type="text/javascript" src="../../js/imageCarousel.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="stylesheet" href="../../Styles/Site.css">
+    <link rel="stylesheet" href="../../Styles/Confetti.css">
+    <link rel="stylesheet" href="../../Styles/imageCarousel.css">
+    <link rel="stylesheet" href="../../Styles/layoutExamples.css">
+    <script src="https://use.fontawesome.com/06ed051ad2.js"></script>
+    <link href="../../images/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <title>My Occasion</title>
+
+</head>
+<body>
+
+<div id="big"></div>
+<div class="Particles" id="particles" style="width:100%; height: 100vh; position:absolute; z-index:-1;"></div>
+
+<div id="content" class="main-display" style="width:100%;">
+    <div style=" display: flex; width:100%;">
+        <div class="container">  
+              
+            <ul class="nav nav-pills" style="justify-content: center; padding-top: 10px">
+                <li style="margin:0px; padding-top:75px" class="active"><a id="menu1a" onclick="toggleContent(0)" class="active" style="font-size: 15px; border-radius: 0px; border-radius: 0px; border-style: solid; border-width: 0.5px; ">Main</a></li>
+                <li style="margin:0px; padding-top:75px"><a id="menu2a" onclick="toggleContent(1)" style="font-size:15px; border-radius:0px; border-style:solid; border-width:0.5px">Messages</a></li>
+                <li style="margin:0px; padding-top:75px"><a id="menu3a" onclick="toggleContent(2)" style="font-size:15px; border-radius:0px; border-style:solid; border-width:0.5px">Images</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="menu1" class="tab-pane fade in active show" aria-labelledby="main-tab" role="tabpanel">
+                    <div id="content" class="main-display" style="width:100%">
+                        <div style="display:flex">
+                            <div class="container">
+                                <div class="main-container">
+                                    <h2 class="padding-bottom-10">Aaron & Justine</h2>
+                                    <h3 class="message">On your wedding day</h3>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+        
+                    <p></p>
+                    <p></p>
+                    <p></p>
+        
+                </div>
+                <div id="menu2" class="tab-pane fade in" aria-labelledby="messages-tab" role="tabpanel">
+                    <div style="display: flex;justify-content: center; width:100%;">
+                        <div id="content" class="main-display" style="width: 100%;">
+                            <div style="width:100%;">
+                                <div class="container" style="padding:0px; margin:0px;">
+                                        <h2 id="messagesTitle" style="padding-top:50px; text-align:center"> Your friends and family have left you messages</h2>
+                                        <div id="messagesContainer" class="scroll-area">
+                                            <div class="card card-style" style="margin:5px">
+                                                <div class="card-body" style="font-size:20px; padding:5px; min-width:300px; margin:10px; ">
+                                                    <p style="text-align: center; margin:0; white-space:pre-wrap">All the best for the future!<br />  - Beth</p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-style" style="margin:5px">
+                                                <div class="card-body" style="font-size:20px; padding:5px; min-width:300px; margin:10px; ">
+                                                    <p style="text-align: center; margin:0; white-space:pre-wrap">Wishing you lots of love and happiness<br />  - Jon</p>
+                                                </div>
+                                            </div>
+                                            <div class="card card-style" style="margin:5px">
+                                                <div class="card-body" style="font-size:20px; padding:5px; min-width:300px; margin:10px; ">
+                                                    <p style="text-align: center; margin:0; white-space:pre-wrap">Here's to the love that brought you together!<br />  - Jane</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+        
+                            <p></p>
+                            <p></p>
+                            <p></p>
+        
+                        </div>
+                    </div>
+        
+                </div>
+                <div id="menu3" class="tab-pane fade in " aria-labelledby="main-tab" role="tabpanel">
+                    <div id="content" class="main-display" style="width:100%">
+                        <div style="display:flex">
+                            <div class="container">
+                    <br><br>
+                                <ul id="thumbnails" class="row" style="display: flex; align-items: center; justify-content: center; padding: 5px;">
+                                    <li style="max-width:200px; min-width:150px; margin:5px; list-style:none;">
+                                        <img class="img-thumbnail" src="../../images/Examples/layout1/aj1.jpg" onclick="setFullScreenSourceAndShow(0)"><br>
+                                    </li>
+                    
+                                        <li style="max-width:200px; min-width:150px; margin:5px; list-style:none;">
+                                            <img class="img-thumbnail" src="../../images/Examples/layout1/aj2.jpg" onclick="setFullScreenSourceAndShow(1)"><br>
+                                        </li>
+                    
+                                        <li style="max-width:200px; min-width:150px; margin:5px; list-style:none;">
+                                            <img class="img-thumbnail" src="../../images/Examples/layout1/aj3.jpg" onclick="setFullScreenSourceAndShow(2)"><br>
+                                        </li>
+                    
+                                        <li style="max-width:200px; min-width:150px; margin:5px; list-style:none;">
+                                            <img class="img-thumbnail" src="../../images/Examples/layout1/aj4.jpg" onclick="setFullScreenSourceAndShow(3)"><br>
+                                        </li>
+                    
+                                    <!--end of thumbnails-->
+                                </ul>
+                            </div>
+                        </div>                        
+                    </div>
+        
+                    <p></p>
+                    <p></p>
+                    <p></p>
+        
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <!-- full screen-->
+    <div id="fullscreen-show" class="d-none fullscreen-show" style="background-color: #2626269c" onclick="hideFullScreenShow()">
+        <div style="display:flex; justify-content: center; height:100%; width:100%; padding:10px; position:fixed; align-items:center;">
+            <div style="position:absolute; height:75%; width:75%; display:flex; justify-content:center; align-items:center; background:#000000b0;">
+                <div id="imageControlls" style="display:flex; justify-content:center; height:93%; width:100%; align-items:flex-end; justify-content: space-evenly;">
+
+                    <button type="button" id="leftBtn" class="image_controlls" style="z-index:100; border-radius:25%; width:50px; height:50px;">
+                        <i class="fa fa-chevron-circle-left fa-4x"></i>
+                    </button>
+                    <button type="button" id="pausePlayBtn" class="image_controlls" style="z-index:100; width:50px; height:50px;" onclick="pause_play()">
+                        <i class="fa fa-play-circle fa-4x"></i>
+                    </button>
+                    <button type="button" id="rightBtn" class="image_controlls" style="z-index:100; border-radius:25%; width:50px; height:50px;" onclick="right()">
+                        <i class="fa fa-chevron-circle-right fa-4x"></i>
+                    </button>
+                    <div id="noBtn" style="width:250px; height:50px; position:absolute;"></div>
+                </div>
+                <img id="fullscreen-img" class="img-in" src="" style="object-fit:contain; width:100%; position:absolute; max-height:75%;" />
+                <img id="fullscreen-img2" class="img-out" src="" style="object-fit:contain; width:100%; position:absolute; max-height:75%;" />
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
+
+<script>
+let menu1 = document.getElementById("menu1");
+let menu1a = document.getElementById("menu1a");
+let menu2 = document.getElementById("menu2");
+let menu2a = document.getElementById("menu2a");
+
+function toggleContent(index)
+{
+    menu1.classList.remove("active");
+    menu1.classList.remove("show");
+    menu1a.classList.remove("active");
+    menu2.classList.remove("active");
+    menu2.classList.remove("show");
+    menu2a.classList.remove("active");
+    menu3.classList.remove("active");
+    menu3.classList.remove("show");
+    menu3a.classList.remove("active");
+
+    switch(index) {
+        case 0:
+            menu1a.classList.add("active");
+            menu1.classList.add("active");
+            menu1.classList.add("show");
+        break;
+        case 1:
+        menu2a.classList.add("active");
+            menu2.classList.add("active");
+            menu2.classList.add("show");
+            break;
+        case 2:
+        menu3a.classList.add("active");
+            menu3.classList.add("active");
+            menu3.classList.add("show");
+            break;
+        default:
+            // code block
+    } 
+
+   
+
+}
+
+    var imgsSrc = [];    
+
+    imgsSrc.push("../../images/Examples/layout1/aj1.jpg");
+    imgsSrc.push("../../images/Examples/layout1/aj2.jpg");
+    imgsSrc.push("../../images/Examples/layout1/aj3.jpg");
+    imgsSrc.push("../../images/Examples/layout1/aj4.jpg");
+    window.onload = function (e) {
+        var db = document.body.scrollHeight;
+
+        document.getElementById("particles").style.height = db + "px";
+
+        updateParticles();
+    }
+
+    function updateParticles()
+    {
+        var db = document.body.scrollHeight;
+
+        document.getElementById("particles").style.height = db+ "px";
+    }
+
+
+    $("#particles").load("/html/ConfettiParticles.html", function() {
+        scriptLoaded = document.createElement("script");
+
+        scriptLoaded.src = '../../js/particles/confetti.js';
+
+        document.head.appendChild(scriptLoaded);
+    }); 
+</script>

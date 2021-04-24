@@ -1,0 +1,27 @@
+body {
+    background-color: #94e1ff;
+    height: 100vh;
+}
+
+h1, h2, h3, p{
+    font-family: 'Handlee', cursive;
+}
+
+a {
+    color: black !important;
+    background-color: #94e1ff !important;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    color: #94e1ff !important;
+    background-color:black !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li a.active{
+    color: #94e1ff !important;
+    background-color: black !important;
+}

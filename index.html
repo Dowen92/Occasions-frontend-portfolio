@@ -159,10 +159,41 @@
             <p style="font-size:13px !important;">&copy; 2021 - My Ocassion</p>
         </div>
     </div>
-    
+     
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Note</h5>
+        </div>
+        <div class="modal-body">
+          This is a portfolio piece for a project I developed and released.
+          This is to show the front end of that project.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="hideNotice()">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      
 </body>
 
 <script>
+    const seen = localStorage.getItem('notified');
+    if(seen != '1')
+    {
+        document.getElementById("staticBackdrop").classList.add("show");
+        localStorage.setItem('notified', '1');
+    }
+
+    function hideNotice()
+    {
+        document.getElementById("staticBackdrop").classList.remove("show");
+    }
+
     var animation3 = bodymovin.loadAnimation({
         container: document.getElementById('bm3'),
         renderer: 'svg',
